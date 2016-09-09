@@ -1,0 +1,30 @@
+<h3 class="m-t:8"><code>ember-ted-button</code></h3>
+
+<div class="d:f j-c:s-b m-t:5 b-b:gray-l m-b:5 p-b:5">
+  <div class="w:1of2 f:1.2">
+
+{{!-- BEGIN-SNIPPET ted-button --}}
+{{ted-button text="Cancel"}}
+{{ted-button text="Save" theme="dark"}}
+
+{{#ted-button classNames="m-l:1"}}
+  <em>any</em> markup can go here
+{{/ted-button}}
+
+{{ted-button 
+  text="can't click this" 
+  theme="dark" 
+  disabled=true 
+  classNames="m-l:1"}}
+{{!-- END-SNIPPET --}}
+
+  </div>
+  <div class="w:1of2 m-l:6"> 
+    {{#ember-markdown-section}}
+    ```
+    ember install ember-ted-button
+    ```
+    {{/ember-markdown-section}}
+    {{code-snippet name="ted-button.hbs"}}
+  </div>
+</div>

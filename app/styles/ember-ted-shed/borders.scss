@@ -113,20 +113,10 @@ $border_colors: (
       .b\:#{$label} {
         border-color: $color;
       }
-      @for $i from 1 through 9 {
-        .b\:#{$label}\.#{$i} {
-          border-color: transparentize($color, ($i / 10));
-        }
-      }
     } @else {
       @media($mq) {
         .b\:#{$label}\@#{$break} {
           border-color: $color;
-        }
-        @for $i from 1 through 9 {
-          .b\:#{$label}\.#{$i}\@#{$break} {
-            border-color: transparentize($color, ($i / 10));
-          }
         }
       }
     }

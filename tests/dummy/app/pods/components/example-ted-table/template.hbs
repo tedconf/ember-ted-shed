@@ -1,0 +1,34 @@
+<h3 class="m-t:8"><code>ember-ted-table</code></h3>
+
+<div class="d:f j-c:s-b m-t:5 b-b:gray-l m-b:5 p-b:5">
+  <div class="w:1of2 f:1.2">
+
+{{!-- BEGIN-SNIPPET ted-table --}}
+  {{#ted-table}}
+    {{#ted-table-header}}
+      {{#ted-table-row}}
+        {{#ted-table-header-cell}}Talk{{/ted-table-header-cell}}
+        {{#ted-table-header-cell}}Speaker name{{/ted-table-header-cell}}
+      {{/ted-table-row}}
+    {{/ted-table-header}}
+    {{#ted-table-body}}
+      {{#each talks as |talk|}}
+        {{#ted-table-row}}
+          {{#ted-table-cell}}{{talk.title}}{{/ted-table-cell}}
+          {{#ted-table-cell}}{{talk.speakerName}}{{/ted-table-cell}}
+        {{/ted-table-row}}
+      {{/each}}
+    {{/ted-table-body}}
+  {{/ted-table}}
+{{!-- END-SNIPPET --}}
+
+  </div>
+  <div class="w:1of2 m-l:6"> 
+    {{#ember-markdown-section}}
+    ```
+    ember install ember-ted-table
+    ```
+    {{/ember-markdown-section}}
+    {{code-snippet name="ted-table.hbs"}}
+  </div>
+</div>

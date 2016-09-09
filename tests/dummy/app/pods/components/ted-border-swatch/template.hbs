@@ -1,0 +1,22 @@
+<p>You can use any of the following named colors (in place of <code>red</code> in the example above):</p>
+
+<div class="d:f flx-w:w m-b:7">
+  {{#each colors as |color|}}
+    <div class="w:1of8 m:.5 t-a:c p-y:2 b:{{color.name}}">
+      <strong>{{color.name}}</strong>
+      {{#if color.description}}
+        ({{color.description}})
+      {{/if}}
+    </div>
+  {{/each}}
+</div>
+
+<p>You can use any of the following named widths (in place of <code>2</code> in the example above):</p>
+
+<div class="d:f flx-w:w">
+  {{#each widths as |width|}}
+    <div class="w:1of8 m:.5 t-a:c p-y:2 b b-w:{{width.class}}">
+      <strong>{{width.name}}</strong>
+    </div>  
+  {{/each}}
+</div>

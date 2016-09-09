@@ -1,0 +1,168 @@
+{{ted-page-header
+  subheading='Ember'
+  slim-heading='TED'
+  strong-heading='shed'
+  byline='shed.css and TED themed functional CSS for your Ember app'
+  github='http://github.com/tedconf/ember-ted-shed'}}
+
+<div class="container">
+  <br>
+  {{#ember-markdown-section}}
+  ## Installation
+  <br>
+
+  #### shed.css 
+  ```
+  ember install ember-ted-shed
+  ```
+
+  You're ready to go with shed.css! Check out the [docs](http://tedconf.github.io/shed-css/) docs for usage.  
+
+  <br>
+
+  #### TED theme
+
+  ```
+  ember install ember-cli-sass
+
+  ```
+
+  ```
+  // app.scss
+
+  @import "ember-ted-shed/colors";
+  @import "ember-ted-shed/borders";
+  ```
+  <br>
+  
+  <hr>
+
+  ## Usage
+
+  There are two ways to use ember-ted-shed:
+
+  1. use ember-ted-shed based UI components 
+  2. use ember-ted-shed to write your own [custom styles](#2-custom-styles-with-ember-ted-shed)
+
+  <br>
+
+  ### 1. ember-ted-shed UI library
+  
+  {{/ember-markdown-section}}
+
+  {{example-ted-table}}
+
+  {{example-ted-button}}
+
+  {{#ember-markdown-section}}
+
+  ### 2. custom styles with ember-ted-shed
+
+  Full usage guidelines for shed.css can be found on the [docs site](http://tedconf.github.io/shed-css/). 
+
+  Note that shed.css does not include any color or border based rules. Use the TED shed theme color and border classes here.
+  <br>
+  <br>
+
+  #### TED shed colors classes
+
+  <div class="w:1of2">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>usage</th>
+          <th>example class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>color</td>
+          <td><code>c:red</code></td>
+        </tr>
+        <tr>
+          <td>
+            background-color
+          </td>
+          <td><code>bg:red</code></td>
+        </tr>
+        <tr>
+          <td>hover color</td>
+          <td><code>hover/bg:red</code></td>
+        </tr>
+        <tr>
+          <td>hover background-color</td>
+          <td><code>hover/c:red</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  You can use any of the following named colors (in place of `red` in the example above):
+
+  {{/ember-markdown-section}}
+  
+  {{ted-color-swatch}}
+  
+  {{#ember-markdown-section}}  
+  
+  #### TED shed border classes
+  <div class="w:1of2">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>usage</th>
+          <th>example class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>border (1px solid currentColor)</td>
+          <td><code>b</code></td>
+        </tr>
+        <tr>
+          <td>
+            border-top
+          </td>
+          <td><code>b-t</code></td>
+        </tr>
+        <tr>
+          <td>
+            border-bottom
+          </td>
+          <td><code>b-b</code></td>
+        </tr>
+        <tr>
+          <td>border-left</td>
+          <td><code>b-l</code></td>
+        </tr>
+        <tr>
+          <td>border-right</td>
+          <td><code>b-r</code></td>
+        </tr>
+        <tr>
+          <td>border (transparent)</td>
+          <td><code>b:t</code></td>
+        </tr>
+        <tr>
+          <td>border (named color)</td>
+          <td><code>b:red</code></td>
+        </tr>
+        <tr>
+          <td>border-top (named color)</td>
+          <td><code>b-t:red</code></td>
+        </tr>
+        <tr>
+          <td>alternate border-width (2px) <sup>*</sup></td>
+          <td><code>b-w:2</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {{/ember-markdown-section}}
+
+  {{ted-border-swatch}}
+
+  <p class="m-t:1 f:.9"><strong>*</strong> border widths act as modifier classes and must be used in conjunction with another border class.</p>
+</div>

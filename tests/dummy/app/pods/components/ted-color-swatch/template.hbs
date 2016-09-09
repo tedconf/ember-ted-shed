@@ -1,0 +1,14 @@
+<div class="d:f flx-w:w m-b:10">
+  {{#each colors as |color|}}
+  <div class="w:1of8 t-a:c">
+    <div class="p-y:5
+      bg:{{color.name}}
+      {{if color.useLightText 'c:gray-l'}}">
+      <strong>{{color.name}}</strong>
+      {{#if color.description}}
+        ({{color.description}})
+      {{/if}}
+    </div>
+  </div>
+  {{/each}}
+</div>
