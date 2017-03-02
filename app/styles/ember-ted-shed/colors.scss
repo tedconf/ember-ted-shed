@@ -72,6 +72,17 @@ $theme_colors: (
 );
 
 @each $break, $mq in $breaks {
+  @if $break == n {
+    .bg\:none {
+      background: none;
+    }
+  } else {
+    @media($mq){
+      .bg\:none\@#{$break} {
+        background: none;
+      }
+    }
+  }
   @each $label, $color in $theme_colors {
     @if $break == n {
       .bg\:#{$label} {

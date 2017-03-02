@@ -110,11 +110,17 @@ $border_colors: (
 @each $break, $mq in $breaks {
   @each $label, $color in $theme_colors {
     @if $break == n {
+      .b\:none {
+        border: none;
+      }
       .b\:#{$label} {
         border-color: $color;
       }
     } @else {
       @media($mq) {
+        .b\:none\@#{$break} {
+          border: none;
+        }
         .b\:#{$label}\@#{$break} {
           border-color: $color;
         }
