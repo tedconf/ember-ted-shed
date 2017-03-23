@@ -59,6 +59,10 @@ $border_colors: (
   .b-r\:#{$name} {
     border-right: 1px solid $color;
   }
+
+  .focus\/b\:#{$name}:focus {
+    border: 1px solid $color;
+  }
 }
 
 
@@ -87,40 +91,51 @@ $border_colors: (
 }
 
 
+// @each $break, $mq in $breaks {
+//   @media($mq) {
+//     .b-b\:gray-ll\@#{$break} {
+//       border-bottom: 1px solid map-get($theme_colors, gray-ll);
+//     }
+
+//     .b-b\:0\@#{$break} {
+//       border-bottom: 0;
+//     }
+
+//     .b-l\@#{$break} {
+//       border-left: 1px solid currentColor;
+//     }
+
+//     .b\:0\@#{$break} {
+//       border: 0;
+//     }
+//   }
+// }
+
 @each $break, $mq in $breaks {
-  @media($mq) {
-    .b-b\:gray-ll\@#{$break} {
-      border-bottom: 1px solid map-get($theme_colors, gray-ll);
-    }
-
-    .b-b\:0\@#{$break} {
-      border-bottom: 0;
-    }
-
-    .b-l\@#{$break} {
-      border-left: 1px solid currentColor;
-    }
-
-    .b\:0\@#{$break} {
-      border: 0;
-    }
-  }
-}
-
-@each $break, $mq in $breaks {
-  @each $label, $color in $theme_colors {
-    @if $break == n {
+  @if $break == n {
       .b\:none {
         border: none;
       }
-      .b\:#{$label} {
-        border-color: $color;
+      .ol\:none {
+        outline: none;
       }
     } @else {
       @media($mq) {
         .b\:none\@#{$break} {
           border: none;
         }
+        .ol\:none\@#{$break} {
+          outline: none;
+        }
+      }
+    }
+  @each $label, $color in $theme_colors {
+    @if $break == n {
+      .b\:#{$label} {
+        border-color: $color;
+      }
+    } @else {
+      @media($mq) {
         .b\:#{$label}\@#{$break} {
           border-color: $color;
         }
