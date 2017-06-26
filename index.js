@@ -1,12 +1,6 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'ember-ted-shed',
-
-  included: function(app) {
-    this._super.included(app);
-
-    app.import(app.bowerDirectory + '/shed-css/index.css');
-  }
+  name: 'ember-ted-shed'
 };
