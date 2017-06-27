@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.3.0",
-    "marked": "^0.3.6"
+    "marked": "^0.3.6",
+    "shed-css": "^1.2.1"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
