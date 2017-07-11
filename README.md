@@ -54,3 +54,16 @@ Full details on both methods are available on the [docs site](http://tedconf.git
 * `ember build`
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+## For maintainers:
+
+### Updating the GitHub pages docs site
+* `ember github-pages:commit --message "update gh-pages"`
+* `git push origin gh-pages`
+
+### Creating a new release and publishing to npm
+
+* `npm version $TYPE -m "message about this version"` where $TYPE indicates the semver release type, eg. `patch`, `major` or `minor`. see the [npm-version docs](https://docs.npmjs.com/cli/version) and (semver docs)[http://semver.org/] if you're not sure which applies
+* `npm publish`
+* `git push --tags`
+* document the changes by [creating a new release](https://github.com/tedconf/ember-ted-shed/releases)
