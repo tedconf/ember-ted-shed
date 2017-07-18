@@ -4,68 +4,48 @@
   strong-heading='shed'
   byline='shed.css and TED themed functional CSS for your Ember app'
   github='http://github.com/tedconf/ember-ted-shed'}}
-
+<br>
 <div class="container">
-  <br>
-  {{#ember-markdown-section}}
-  ## Installation
-  <br>
+  <h2 id="installation">Installation</h2>
+  <p><br></p>
+  <h4 id="shed-css">shed.css</h4>
+  <pre><code>ember install ember-ted-shed</code></pre>
 
-  #### shed.css 
-  ```
-  ember install ember-ted-shed
-  ```
+  <p>You're ready to go with shed.css! Check out the <a href="http://tedconf.github.io/shed-css/">docs</a> docs for usage. </p>
+  <p><br></p>
+  <h4 id="ted-theme">TED theme</h4>
+  <pre><code>ember install ember-cli-sass</code></pre>
 
-  You're ready to go with shed.css! Check out the [docs](http://tedconf.github.io/shed-css/) docs for usage.  
+  <pre><code>// app.scss
 
-  <br>
+@import "ember-ted-shed/colors";
+@import "ember-ted-shed/borders";</code></pre>
 
-  #### TED theme
-
-  ```
-  ember install ember-cli-sass
-
-  ```
-
-  ```
-  // app.scss
-
-  @import "ember-ted-shed/colors";
-  @import "ember-ted-shed/borders";
-  ```
-  <br>
-  
+  <p><br></p>
   <hr>
 
-  ## Usage
+  <h2 id="usage">Usage</h2>
+  <p>There are two ways to use ember-ted-shed:</p>
 
-  There are two ways to use ember-ted-shed:
+  <ol>
+    <li>use ember-ted-shed based UI components </li>
+    <li>use ember-ted-shed to write your own <a href="#2-custom-styles-with-ember-ted-shed">custom styles</a></li>
+  </ol>
 
-  1. use ember-ted-shed based UI components 
-  2. use ember-ted-shed to write your own [custom styles](#2-custom-styles-with-ember-ted-shed)
-
-  <br>
-
-  ### 1. ember-ted-shed UI library
-  
-  {{/ember-markdown-section}}
+  <h3 id="1-ember-ted-shed-ui-library">1. ember-ted-shed UI library</h3>
 
   {{example-ted-table}}
 
   {{example-ted-button}}
 
-  {{#ember-markdown-section}}
+  <h3 id="2-custom-styles-with-ember-ted-shed">2. custom styles with ember-ted-shed</h3>
 
-  ### 2. custom styles with ember-ted-shed
-
-  Full usage guidelines for shed.css can be found on the [docs site](http://tedconf.github.io/shed-css/). 
-
-  Note that shed.css does not include any color or border based rules. Use the TED shed theme color and border classes here.
+  <p>Full usage guidelines for shed.css can be found on the <a href="http://tedconf.github.io/shed-css/">docs site</a>.</p>
+  <p>Note that shed.css does not include any color or border based rules. Use the TED shed theme color and border classes here.
   <br>
-  <br>
+  <br></p>
 
-  #### TED shed colors classes
-
+  <h4 id="ted-shed-colors-classes">TED shed colors classes</h4>
   <div class="w:1of2">
     <table class="table">
       <thead>
@@ -97,16 +77,11 @@
     </table>
   </div>
 
+  <p>You can use any of the following named colors (in place of <code>red</code> in the example above):</p>
 
-  You can use any of the following named colors (in place of `red` in the example above):
-
-  {{/ember-markdown-section}}
-  
   {{ted-color-swatch}}
-  
-  {{#ember-markdown-section}}  
-  
-  #### TED shed border classes
+
+  <h4 id="ted-shed-border-classes">TED shed border classes</h4>
   <div class="w:1of2">
     <table class="table">
       <thead>
@@ -164,15 +139,12 @@
     </table>
   </div>
 
-  {{/ember-markdown-section}}
-
   {{ted-border-swatch}}
 
   <p class="m-t:1 f:.9 m-b:6"><strong>*</strong> border widths act as modifier classes and must be used in conjunction with another border class.</p>
 
-  
   <h4>Color &amp; border utility classes</h4>
-  
+
   <div class="w:1of2">
     <table class="table">
       <thead>
@@ -185,7 +157,7 @@
         <tr>
           <td>background: none</td>
           <td><code>.bg:none</code></td>
-        </tr>  
+        </tr>
         <tr>
           <td>border: none</td>
           <td><code>.b:none</code></td>
@@ -193,9 +165,8 @@
         <tr>
           <td>outline: none</td>
           <td><code>.ol:none</code></td>
-        </tr>  
+        </tr>
       </tbody>
     </table>
   </div>
-
 </div>
