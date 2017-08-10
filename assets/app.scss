@@ -1,0 +1,13 @@
+@import 'bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'ember-ted-docs/styles';
+
+@import "app/styles/ember-ted-shed/colors";
+@import "app/styles/ember-ted-shed/borders";
+
+html {
+  font-size: 14px;
+}
+
+.o\:\.6 {
+  opacity: 0.6;
+}
