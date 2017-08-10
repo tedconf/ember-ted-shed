@@ -8,7 +8,9 @@
 ember install ember-ted-shed
 ```
 
-You're ready to go with shed.css! Check out the [docs](http://tedconf.github.io/shed-css/) docs for usage.
+You're ready to go with shed.css! Check out the [shed.css docs](http://tedconf.github.io/shed-css/) for usage. 
+
+Note that shed.css core doesn't ship with any colour-related classes. For that you'll want to import the TED theme that ships with this addon...
 
 #### TED theme
 
