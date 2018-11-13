@@ -1,5 +1,9 @@
 # Ember-ted-shed
 
+## WARNING
+
+This addon is no longer actively developed.
+
 ## Installation
 
 #### shed.css
